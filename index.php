@@ -1,10 +1,25 @@
 <?php
 
 
-if (isset($_POST['simpan'])) {
-    //
-    $harga = 'Rp. ' . number_format($_POST['harga'], 0, ",", ".");
-    $jumlah_harga = 'Rp. ' . number_format($_POST['jml_item'] * $_POST['harga'], 0, ",", ".");
+if (isset($_POST['trapesium'])) {
+
+    // Rumus trapesium
+    $atas = $_POST['atas'];
+    $bawah = $_POST['bawah'];
+    $tinggi = $_POST['tinggi'];
+
+    $luas = 1 / 2 * ($atas + $bawah) * $tinggi;
+} else if (isset($_POST['suhu'])) {
+    // Rumus suhu
+    $F = $_POST['f'];
+    // celcius
+    $C = ($F - 32) * 5 / 9;
+
+    // Rankine
+    $R = $f + 459.67;
+
+    // Kelvin
+    $K = ($F - 32) * 5 / 9 + 273.15;
 }
 
 
@@ -16,7 +31,7 @@ if (isset($_POST['simpan'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web 2 | Pertemuan 2 | Nurdiansah</title>
+    <title>Web 2 | Nurdiansah</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -33,58 +48,106 @@ if (isset($_POST['simpan'])) {
         <a class="navbar-brand mb-0 h1" href="index.php">Home</a>
         <a class="nav-link text-dark float-left" href="profile.php">Profile</a>
     </nav>
+
+
+
     <div class="container">
+        <div class="display-4 mt-2 mb-2">Web 2 | Pertemuan 1 </div>
+        <h3>Menghitung Luas Trapesium</h3>
+
+        <?php if (isset($luas)) { ?>
+            <div class="alert alert-success mt-3" role="alert">
+                Berhasil Menghitung !
+            </div>
+        <?php } ?>
         <div class="row">
             <!-- Form -->
             <div class="col-sm-12 col-md-4 mt-3">
                 <div class="card">
                     <div class="card-header bg-warning">
-                        Tambah Barang
+                        Masukan Nilai
                     </div>
                     <div class="card-body">
                         <form action="" method="POST">
                             <div class="form-group">
-                                <label>Nama Peralatan</label>
-                                <input type="text" class="form-control" name="nm_item">
+                                <label>Garis Atas</label>
+                                <input type="number" name="atas" class="form-control" autocomplete="off" required step="any" min="0.01" value="<?= $atas; ?>">
                             </div>
                             <div class=" form-group">
-                                <label>Jumlah</label>
-                                <input type="text" class="form-control" name="jml_item">
+                                <label>Garis Bawah</label>
+                                <input type="number" name="bawah" class="form-control" autocomplete="off" required step="any" min="0.01" value="<?= $bawah; ?>">
                             </div>
                             <div class=" form-group">
-                                <label>Harga Satuan</label>
-                                <input type="text" class="form-control" name="harga">
+                                <label>Tinggi</label>
+                                <input type="number" name="tinggi" class="form-control" autocomplete="off" required step="any" min="0.01" value="<?= $tinggi; ?>">
                             </div>
-                            <button type="submit" name="simpan" class="btn btn-primary float-right">Tambah</button>
+                            <button type="submit" name="trapesium" class="btn btn-primary float-right">Hitung</button>
                         </form>
                     </div>
                 </div>
             </div>
+            <?php if (isset($luas)) { ?>
+                <!-- Return -->
+                <div class="col-sm-12 col-md-3 ">
+                    <div class="card text-white bg-primary mt-3" style="max-width: 18rem;">
+                        <div class="card-header">Hasil</div>
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Luas Trapesium</h5>
+                            <p>Rumus : <br>1 / 2 x (atas + bawah) x tinggi </p>
+                            <p>Hitung : <br>1 / 2 x (<?= $atas . ' + ' . $bawah . ') x ' . $tinggi ?></p>
+                            <h4 class="card-title"><b> = <?= $luas; ?></b></h4>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
 
-            <!-- Table -->
-            <div class="col-sm-12 col-md-8 mt-3">
-                <table class="table table-striped">
-                    <caption>Daftar Pemesanan Peralatan Kantor</caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Nama Peralatan</th>
-                            <th scope="col">Jumlah</th>
-                            <th scope="col">Harga Satuan</th>
-                            <th scope="col">Jumlah Harga</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td><?= $_POST['nm_item'] ?></td>
-                            <td><?= $_POST['jml_item'] ?></td>
-                            <td><?= $harga ?></td>
-                            <td><?= $jumlah_harga; ?></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <!-- Akhir return -->
+        </div>
+
+        <!-- Konversi suhu -->
+        <h3 class="mt-5">Konversi Suhu</h3>
+
+        <?php if (isset($C)) { ?>
+            <div class="alert alert-success mt-3" role="alert">
+                Berhasil Menghitung !
             </div>
+        <?php } ?>
+        <div class="row">
+            <!-- Form -->
+            <div class="col-sm-12 col-md-4 mt-3">
+                <div class="card">
+                    <div class="card-header bg-danger">
+                        Masukan Nilai
+                    </div>
+                    <div class="card-body">
+                        <form action="" method="POST">
+                            <div class="form-group">
+                                <label>Derajat &#8457; </label>
+                                <input type="number" name="f" class="form-control" autocomplete="off" required step="any" min="0.01" value="<?= $F; ?>">
+                            </div>
+                            <button type="submit" name="suhu" class="btn btn-primary float-right">Hitung</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <?php if (isset($C)) { ?>
+                <!-- Return -->
+                <div class="col-sm-12 col-md-3 ">
+                    <div class="card text-white bg-primary mt-3" style="max-width: 18rem;">
+                        <div class="card-header">Hasil</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Derajat C </h5>
+                            <h4 class="card-title"><b>= <?= $C; ?></b></h4>
+                            <h5 class="card-title">Derajat R </h5>
+                            <h4 class="card-title"><b>= <?= $R; ?></b></h4>
+                            <h5 class="card-title">Derajat K </h5>
+                            <h4 class="card-title"><b>= <?= $K; ?></b></h4>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+
+            <!-- Akhir return -->
         </div>
     </div>
 </body>
