@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-12-12T09:58:15.096Z" agent="5.0 (X11)" etag="1bGrxstDR7rPMLTM-IhM" version="13.10.9" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-12T10:02:03.498Z" agent="5.0 (X11)" etag="yMRKTKvFWxhpIVtJLddQ" version="13.10.9" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
-    <mxGraphModel dx="2636" dy="1679" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <mxGraphModel dx="4353" dy="2740" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -82,7 +82,7 @@
           <mxGeometry x="30" width="220" height="30" as="geometry" />
         </mxCell>
         <mxCell id="9JYPRybK3mzHZb6tLrKf-3" value="User" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#007FFF;" vertex="1" parent="1">
-          <mxGeometry x="-450" y="10" width="270" height="285" as="geometry">
+          <mxGeometry x="250" y="20" width="270" height="285" as="geometry">
             <mxRectangle x="20" y="130" width="60" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -283,7 +283,7 @@
           <mxGeometry x="30" width="250" height="30" as="geometry" />
         </mxCell>
         <mxCell id="9JYPRybK3mzHZb6tLrKf-195" value="Jetty" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;strokeColor=#000000;fillColor=#007FFF;" vertex="1" parent="1">
-          <mxGeometry x="-810" y="10" width="280" height="260" as="geometry">
+          <mxGeometry x="-870" width="280" height="260" as="geometry">
             <mxRectangle x="60" y="180" width="60" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -324,7 +324,7 @@
           <mxGeometry x="30" width="250" height="30" as="geometry" />
         </mxCell>
         <mxCell id="9JYPRybK3mzHZb6tLrKf-214" value="Job Order" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;strokeColor=#000000;fillColor=#007FFF;" vertex="1" parent="1">
-          <mxGeometry x="-430" y="590" width="290" height="1210" as="geometry">
+          <mxGeometry x="-460" y="10" width="290" height="1210" as="geometry">
             <mxRectangle y="480" width="110" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -1086,6 +1086,12 @@
             <mxPoint x="-10" y="590" as="sourcePoint" />
             <mxPoint x="90" y="490" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="9JYPRybK3mzHZb6tLrKf-665" value="&lt;div style=&quot;font-size: 52px&quot;&gt;&lt;font style=&quot;font-size: 52px&quot;&gt;ERD &lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 52px&quot;&gt;&lt;font style=&quot;font-size: 52px&quot;&gt;PORT OPERATIONAL SYSTEM&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-1150" y="-270" width="1330" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="9JYPRybK3mzHZb6tLrKf-666" value="&lt;div style=&quot;font-size: 25px&quot;&gt;&lt;font style=&quot;font-size: 25px&quot;&gt;Nama : Nurdiansah&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 25px&quot;&gt;&lt;font style=&quot;font-size: 25px&quot;&gt;Nim : 171011400099&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="-100" width="270" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
